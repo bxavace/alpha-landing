@@ -20,7 +20,7 @@ body {
   /* background: url(/images/tkg-sn-gif.gif) center top / auto no-repeat text; */
   font-family: "General Sans", sans-serif;
   font-size: 7rem;
-  background-image: url(/images/takagi-san-nishikata.gif);
+  background-image: url(./images/takagi-san-nishikata.gif);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
