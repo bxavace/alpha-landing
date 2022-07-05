@@ -144,4 +144,12 @@ h2 {
     padding-left: 0;
     padding-top: 24px;
   }
+
+  .toggle-theme {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    margin: 0;
+    padding: 12px;
+  }
 }
