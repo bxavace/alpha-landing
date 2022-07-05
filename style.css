@@ -78,6 +78,7 @@ h2 {
   color: inherit;
   font-size: medium;
   font-weight: 300;
+  user-select: none;
 }
 
 @keyframes transitionIn {
