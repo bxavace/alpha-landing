@@ -23,9 +23,6 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-  filter: blur(10px);
-  opacity: 0;
-  transition: 0.7s ease-in-out, filter 1s ease-in-out;
 }
 
 body.dark {
@@ -68,6 +65,13 @@ body.dark {
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   font-size: 4.5rem;
   user-select: none;
+}
+
+.name,
+.name-jp {
+  filter: blur(10px);
+  opacity: 0;
+  transition: 0.7s ease-in-out, filter 0.7s ease-in-out;
 }
 
 h2 {

@@ -11,7 +11,10 @@ toggleTheme.onclick = () => {
 };
 
 setTimeout(() => {
-  const body = document.querySelector("body");
-  body.style.opacity = 1;
-  body.style.filter = "blur(0px)";
+  const name = document.querySelector(".name");
+  const namejp = document.querySelector(".name-jp");
+  name.style.opacity = 1;
+  namejp.style.opacity = 1;
+  name.style.filter = "blur(0px)";
+  namejp.style.filter = "blur(0px)";
 }, 1000);
