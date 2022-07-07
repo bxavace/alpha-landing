@@ -23,6 +23,7 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  transition: 0.2s ease-in-out;
 }
 
 body.dark {
