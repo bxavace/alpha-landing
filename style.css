@@ -1,5 +1,7 @@
 /* Svg Gradient-filled text https://codepen.io/brenna/pen/mybQVx */
 
+/* Line art made with Anime.js */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap");
 
@@ -23,7 +25,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
   transition: 0.2s ease-in-out;
 }
@@ -75,7 +76,8 @@ body.dark {
 .name-jp {
   filter: blur(10px);
   opacity: 0;
-  transition: 0.7s ease-in-out, filter 0.7s ease-in-out;
+  transition: 0.7s ease, filter 0.7s ease;
+  z-index: 2;
 }
 
 h2 {
@@ -85,13 +87,25 @@ h2 {
 .msg {
   animation: transitionIn 1s;
   display: block;
-  font-weight: 300;
+  font-weight: 200;
   text-align: center;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
+  z-index: 2;
+}
+
+.nav-container ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-container ul li {
+  text-decoration: none;
+  list-style-type: none;
 }
 
 .nav-items {
@@ -105,7 +119,7 @@ h2 {
 .item a {
   text-decoration: none;
   color: inherit;
-  font-size: medium;
+  font-size: 1.3rem;
   font-weight: 300;
   user-select: none;
 }
@@ -120,10 +134,87 @@ h2 {
   cursor: pointer;
   transition: all 0.2s ease-out;
   user-select: none;
+  z-index: 1000;
 }
 
 .toggle-theme:hover {
   background-color: var(--i-color-hover);
+}
+
+.swc {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  user-select: none;
+}
+
+.swb {
+  height: 3rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.swb ul {
+  margin: 0 0.625rem;
+  padding: 0;
+  animation: scrollUp 4s infinite;
+}
+
+.swb ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 3rem;
+  list-style: none;
+}
+
+.bg-txt .span-1 {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+}
+
+.bg-txt .span-2 {
+  position: absolute;
+  right: 10%;
+  top: 18%;
+}
+
+/* Feels distracting, idk... */
+/* .bg-txt:hover .span-1,
+.bg-txt:hover .span-2 {
+  opacity: 0.4;
+} */
+
+.bg-txt span {
+  color: var(--text-color);
+  font-size: 12rem;
+  font-family: "General Sans";
+  font-weight: 800;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 0;
+  opacity: 0.05;
+}
+
+@keyframes scrollUp {
+  15%,
+  25% {
+    transform: translateY(-20%);
+  }
+  40%,
+  50% {
+    transform: translateY(-40%);
+  }
+  65%,
+  75% {
+    transform: translateY(-60%);
+  }
+  90%,
+  100% {
+    transform: translateY(-80%);
+  }
 }
 
 @keyframes transitionIn {
@@ -152,8 +243,8 @@ h2 {
     word-wrap: normal;
   }
 
-  .nav-container {
-    display: inline-block;
+  .nav-container ul {
+    flex-direction: column;
   }
 
   .nav-items {
@@ -167,5 +258,13 @@ h2 {
     right: 3rem;
     margin: 0;
     padding: 12px;
+  }
+
+  .bg-txt {
+    left: 10%;
+  }
+
+  .bg-txt span {
+    font-size: 10rem;
   }
 }
