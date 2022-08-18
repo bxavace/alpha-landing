@@ -158,13 +158,13 @@ h2 {
 .swb ul {
   margin: 0 0.625rem;
   padding: 0;
-  animation: scrollUp 4s infinite;
+  animation: scrollUp 5s infinite;
 }
 
 .swb ul li {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   height: 3rem;
   list-style: none;
 }
@@ -190,11 +190,11 @@ h2 {
 .bg-txt span {
   color: var(--text-color);
   font-size: 12rem;
-  font-family: "General Sans";
+  font-family: "General Sans", Helvetica, sans-serif;
   font-weight: 800;
   user-select: none;
   white-space: nowrap;
-  z-index: 0;
+  z-index: -2;
   opacity: 0.05;
 }
 
