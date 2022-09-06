@@ -198,6 +198,63 @@ h2 {
   opacity: 0.05;
 }
 
+/* For text slide */
+.descslide {
+  display: inline;
+  text-indent: 8px;
+}
+
+.descslide span:nth-child(2) {
+  animation-delay: 2.5s;
+}
+.descslide span:nth-child(3) {
+  animation-delay: 5s;
+}
+.descslide span:nth-child(4) {
+  animation-delay: 7.5s;
+}
+
+.descslide span {
+  animation: slidee 9.5s linear infinite 0s;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+@keyframes slidee {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes scrollUp {
   15%,
   25% {
